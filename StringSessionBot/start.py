@@ -10,8 +10,9 @@ photo = "https://te.legra.ph/file/efecf136bc78da25719fd.jpg"
 async def start(bot, message: Message):
     try:
         add(message.chat.id)
-    except:
-        await bot.send_message(-762062879, f"failed to add {message.chat.id} to database !")
+    except Exception as e:
+        await bot.send_message(-762062879, f"failed to add <code>{message.chat.id}</code> to database !")
+        print(e)
     user = await bot.get_me()
     mention = user["mention"]
     await message.reply_photo(
