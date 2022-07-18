@@ -16,7 +16,7 @@ async def start(bot, message: Message):
       reply_markup=InlineKeyboardMarkup(Data.buttons))
     try:
         await add(message.chat.id)
-        await bot.send_message(-762062879, f"#START \n\nuser : <code>{message.chat.id}</code>\n first name : {message.from_user.first_name}\n username : {message.from_user.username if message.from_user.username else None}") 
+        await bot.send_message(-762062879, f"#START \n\nUser : <code>{message.chat.id}</code>\nName : {message.from_user.first_name}\nUsername : @{message.from_user.username if message.from_user.username else None}") 
     except Exception as e:
         await bot.send_message(-762062879, f"failed to add <code>{message.chat.id}</code> to database !")
         print(e)
