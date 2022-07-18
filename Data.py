@@ -33,8 +33,8 @@ class Data:
             InlineKeyboardButton("✨Contact❄️", callback_data="about")
         ],
         [
-            InlineKeyboardButton("✨Owner❤️", url="https://t.me/NotReallyAlpha"),
-            InlineKeyboardButton("✨Group💜", url="https://t.me/BTS_CHAT_ZONE")
+            InlineKeyboardButton("✨Owner❤️", url="https://t.me/Timeisnotwaiting"),
+            InlineKeyboardButton("✨Network💜", url="https://t.me/THE_END_NETWORK")
         ],
         [
             InlineKeyboardButton("✨Commands💫", callback_data="cmda"),
