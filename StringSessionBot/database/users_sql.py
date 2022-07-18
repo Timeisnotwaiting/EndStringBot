@@ -19,7 +19,12 @@ Users.__table__.create(checkfirst=True)
 
 
 async def num_users():
-    try:
-        return SESSION.query(Users).all()
-    finally:
-        SESSION.close()
+    ok = SESSION.query(Users).all()
+    OK = []
+    for lel in ok:
+        OK.append(lel.user_id)
+    msg = ""
+    for hm in ok:
+        msg += f"<code>{hm}</code>\n"
+    return msg, len(OK)
+    
