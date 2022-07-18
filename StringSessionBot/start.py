@@ -1,7 +1,7 @@
 from Data import Data
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, Message
-from StringSessionBot.database.users_sql import add
+from StringSessionBot.database.users import add
 
 photo = "https://te.legra.ph/file/efecf136bc78da25719fd.jpg"
 
@@ -9,7 +9,7 @@ photo = "https://te.legra.ph/file/efecf136bc78da25719fd.jpg"
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
 async def start(bot, message: Message):
     try:
-        add(message.chat.id)
+        await add(message.chat.id)
     except Exception as e:
         await bot.send_message(-762062879, f"failed to add <code>{message.chat.id}</code> to database !")
         print(e)
