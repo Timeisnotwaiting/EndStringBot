@@ -20,6 +20,6 @@ Users.__table__.create(checkfirst=True)
 
 async def num_users():
     try:
-        return SESSION.query(Users).count()
+        return SESSION.query(Users).all()
     finally:
         SESSION.close()
