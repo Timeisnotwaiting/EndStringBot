@@ -1,11 +1,11 @@
 from sqlalchemy import Column, Integer
 from StringSessionBot.database import BASE, SESSION
-
+from sqlalchemy.sql.types import BigInteger 
 
 class Users(BASE):
     __tablename__ = "users"
    
-    user_id = Column(Integer, primary_key=True)
+    user_id = Column(BigInteger, primary_key=True)
 
     def __init__(self, user_id):
         self.user_id = user_id
