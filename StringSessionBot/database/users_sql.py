@@ -28,3 +28,10 @@ async def num_users():
         msg += f"<code>{hm}</code>\n"
     return msg, len(OK)
     
+def add(a):
+    lel = SESSION.query(Users).get(a)
+    if not lel:
+        SESSION.add(Users(a))
+        SESSION.commit()
+    else:
+        SESSION.close()
