@@ -2,7 +2,6 @@ from Config import *
 import logging
 from pyromod import listen
 from pyrogram import Client, idle
-from os import getenv
 from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvalid
 
 if not API_ID:
