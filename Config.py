@@ -25,3 +25,14 @@ else:
     MUST_JOIN = ""
     #if MUST_JOIN.startswith("@"):
        # MUST_JOIN = MUST_JOIN[1:]
+
+
+def ask():
+    if not API_ID:
+        API_ID = int(input("ENTER API_ID: \n"))
+    if not API_HASH:
+        API_HASH = input("ENTER API_HASH: \n")
+    if not BOT_TOKEN:
+        BOT_TOKEN = input("ENTER BOT_TOKEN: \n")
+    if not DATABASE_URL:
+        DATABASE_URL = input("ENTER SQL DB URL: \n")
